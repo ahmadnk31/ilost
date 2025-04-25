@@ -35,9 +35,8 @@ export async function POST(request: NextRequest) {
         { status: 409 }
       );
     }
-    
-    // Save to database
-    const newEntry = await prisma.waitlistEntry.create({
+      // Save to database
+    await prisma.waitlistEntry.create({
       data: {
         email,
         name,
