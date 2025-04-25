@@ -1,46 +1,67 @@
 
 import {WaitlistForm} from "@/components/WaitlistForm";
 
+import type { Metadata } from 'next';
+import { siteConfig } from '@/lib/metadata';
+
+export const metadata: Metadata = {
+  title: `${siteConfig?.name} - Reuniting People With Lost Items`,
+  description: "The trusted platform connecting finders of lost items with their rightful owners through secure verification.",
+  alternates: {
+    canonical: '/',
+  },
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-purple-950/30 dark:to-blue-950/20 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full z-0 opacity-70 dark:opacity-30">
+      <div className="absolute top-0 left-0 w-full h-full z-0 opacity-70 dark:opacity-30" aria-hidden="true">
         <div className="absolute top-10 left-[10%] w-72 h-72 bg-purple-200 dark:bg-purple-700/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
         <div className="absolute top-[30%] right-[10%] w-80 h-80 bg-blue-200 dark:bg-blue-700/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-10 left-[20%] w-60 h-60 bg-indigo-200 dark:bg-indigo-700/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10">
+        <header className="mb-12">
+          <div className="inline-flex items-center justify-center p-1.5 px-4 mb-4 rounded-full bg-white/70 backdrop-blur dark:bg-white/10 shadow-sm border border-gray-200 dark:border-gray-800">
+            <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-pulse">
+              Coming Soon
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-primary to-secondary dark:from-white dark:via-primary/90 dark:to-secondary/90 bg-clip-text text-transparent mb-4">
+            <span className="sr-only">iLost - </span>
+            <span className="relative">
+              iLost
+              <span className="absolute -bottom-1.5 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+            </span>
+            <span className="sr-only"> - </span>
+            Reuniting People With Lost Items
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            The trusted platform connecting finders of lost items with their rightful owners through secure verification.
+          </p>
+        </header>
+        
         <main className="flex flex-col gap-8 items-center text-center">
           <div className="space-y-6 max-w-3xl mx-auto">
-            <div className="inline-flex items-center justify-center p-1.5 px-4 mb-4 rounded-full bg-white/70 backdrop-blur dark:bg-white/10 shadow-sm border border-gray-200 dark:border-gray-800">
-              <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-pulse">
-                Coming Soon
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-primary to-secondary dark:from-white dark:via-primary/90 dark:to-secondary/90 bg-clip-text text-transparent">
-              <span className="relative">
-                iLost
-                <span className="absolute -bottom-1.5 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
-              </span> - Reuniting People With Lost Items
-            </h1>
-            
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              The trusted platform connecting finders of lost items with their rightful owners through secure verification. Join our waitlist to be the first to know when we launch.
+              Join our waitlist to be the first to know when we launch.
             </p>
 
             {/* Features section */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="group flex flex-col items-center p-6 bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
-                <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/40 dark:from-primary/30 dark:to-primary/50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-primary dark:text-primary/90">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Easy Reporting</h3>
-                <p className="mt-2 text-center text-gray-600 dark:text-gray-300">Simple process for good Samaritans to report and submit details of found items they want to return.</p>
-              </div>
+            <section aria-labelledby="features-heading" className="mt-16">
+              <h2 id="features-heading" className="sr-only">Features</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article className="group flex flex-col items-center p-6 bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+                  <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/40 dark:from-primary/30 dark:to-primary/50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-primary dark:text-primary/90">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Easy Reporting</h3>
+                  <p className="mt-2 text-center text-gray-600 dark:text-gray-300">Simple process for good Samaritans to report and submit details of found items they want to return.</p>
+                </article>
               
               <div className="group flex flex-col items-center p-6 bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:border-secondary/30">
                 <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-secondary/20 to-secondary/40 dark:from-secondary/30 dark:to-secondary/50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md">
@@ -62,6 +83,7 @@ export default function Home() {
                 <p className="mt-2 text-center text-gray-600 dark:text-gray-300">Bringing together finders and owners in a trusted environment with safe meetup options and coordination support.</p>
               </div>
             </div>
+            </section>
             
             {/* Waitlist Form Section */}
             <div className="mt-12 relative max-w-md mx-auto">
