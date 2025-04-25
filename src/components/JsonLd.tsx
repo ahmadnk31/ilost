@@ -8,9 +8,9 @@ export function JsonLdProvider() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "iLost",
-    url: siteConfig?.url,
-    logo: `${siteConfig?.url}/logo.png`,
-    description: siteConfig?.description,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/logo.png`,
+    description: siteConfig.description,
     sameAs: [
       "https://twitter.com/ilost",
       "https://facebook.com/ilost",

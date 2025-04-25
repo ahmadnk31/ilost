@@ -1,11 +1,9 @@
 
 import {WaitlistForm} from "@/components/WaitlistForm";
-
 import type { Metadata } from 'next';
-import { siteConfig } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: `${siteConfig?.name} - Reuniting People With Lost Items`,
+  title: "Reuniting People With Lost Items",
   description: "The trusted platform connecting finders of lost items with their rightful owners through secure verification.",
   alternates: {
     canonical: '/',

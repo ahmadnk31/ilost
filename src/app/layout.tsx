@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { metadata } from "@/lib/metadata";
 import "./globals.css";
 import {JsonLdProvider} from "@/components/JsonLd";
+import type { Metadata } from 'next';
+import { siteConfig } from "@/lib/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,14 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-export { metadata };
+export const metadata: Metadata = {
+  title: {
+    default: `${siteConfig.name} - Find Lost Items`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
+};
 
 export default function RootLayout({
   children,
