@@ -2,8 +2,5 @@
   "buildCommand": "prisma generate && next build",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["iad1"],
-  "buildEnvironment": {
-    "PRISMA_SKIP_POSTINSTALL_GENERATE": "true"
-  }
+  "regions": ["iad1"]
 }
