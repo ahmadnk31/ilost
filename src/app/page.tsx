@@ -22,21 +22,24 @@ export default function Home() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10">
         <header className="mb-12">
-          <div className="inline-flex items-center justify-center p-1.5 px-4 mb-4 rounded-full bg-white/70 backdrop-blur dark:bg-white/10 shadow-sm border border-gray-200 dark:border-gray-800">
+          <div className="inline-flex items-center justify-center p-1.5 px-4 mb-6 rounded-full bg-white/70 backdrop-blur dark:bg-white/10 shadow-sm border border-gray-200 dark:border-gray-800">
             <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-pulse">
               Coming Soon
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-primary to-secondary dark:from-white dark:via-primary/90 dark:to-secondary/90 bg-clip-text text-transparent mb-4">
-            <span className="sr-only">iLost - </span>
-            <span className="relative">
+          
+          <h1 className="mb-6">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-primary to-secondary dark:from-white dark:via-primary/90 dark:to-secondary/90 bg-clip-text text-transparent">
               iLost
-              <span className="absolute -bottom-1.5 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
             </span>
-            <span className="sr-only"> - </span>
-            Reuniting People With Lost Items
+            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2 text-gray-700 dark:text-gray-300 font-semibold">
+              Reuniting People With Lost Items
+            </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          
+          <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
+          
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
             The trusted platform connecting finders of lost items with their rightful owners through secure verification.
           </p>
         </header>
